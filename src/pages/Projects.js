@@ -1,48 +1,75 @@
 import React from "react";
+// Import project screenshots (add actual images to src/assets/images/projects/)
+import notesAppImg from '../assets/images/projects/notes-app.png';
+import hellomartImg from '../assets/images/projects/hellomart.png';
+import myAuditsImg from '../assets/images/projects/my-audits.png';
+import robocashImg from '../assets/images/projects/robocash.png';
 
 function Projects() {
   const projects = [
     {
-      title: "Crypto Price Forecasting App",
-      description: "A web application that predicts cryptocurrency prices using machine learning algorithms and real-time market data.",
-      technologies: ["React", "Python", "Flask", "Chart.js", "CoinGecko API"],
+      title: "Notes App Backend",
+      description: "A RESTful API backend for managing notes built with Hapi.js framework, featuring CRUD operations and in-memory storage.",
+      image: notesAppImg,
+      technologies: ["Hapi.js", "Node.js", "JavaScript", "ESLint", "Postman"],
       features: [
-        "Real-time price tracking",
-        "Price prediction algorithms",
-        "Interactive charts and graphs",
-        "Portfolio tracking"
+        "RESTful API endpoints",
+        "CRUD operations for notes",
+        "In-memory storage",
+        "CORS enabled",
+        "API testing with Postman"
       ],
-      github: "https://github.com/tukangbakmi/crypto-forecasting",
-      demo: "#",
-      status: "In Development"
-    },
-    {
-      title: "Book Tracker Mobile App",
-      description: "A mobile application for book enthusiasts to track their reading progress, discover new books, and share reviews.",
-      technologies: ["React Native", "Node.js", "MongoDB", "Express"],
-      features: [
-        "Reading progress tracking",
-        "Book search and discovery",
-        "Personal reading statistics",
-        "Social features for sharing reviews"
-      ],
-      github: "https://github.com/tukangbakmi/book-tracker",
+      github: "https://github.com/TukangBakmi/notes-app-back-end",
       demo: "#",
       status: "Completed"
     },
     {
-      title: "Personal Portfolio Website",
-      description: "A responsive portfolio website built with React and deployed on GitHub Pages to showcase my projects and skills.",
-      technologies: ["React", "Bootstrap", "GitHub Pages"],
+      title: "HelloMart - Modern E-commerce Website",
+      description: "A modern, responsive e-commerce frontend built with React and Bootstrap, featuring glass morphism effects and integrating with Fake Store API for product data.",
+      image: hellomartImg,
+      technologies: ["React", "Bootstrap 5", "React Router", "Font Awesome", "Fake Store API"],
       features: [
-        "Responsive design",
-        "Project showcase",
-        "Contact form",
-        "Modern UI/UX"
+        "Modern UI with glass morphism effects",
+        "Shopping cart with persistent storage",
+        "Product search and filtering",
+        "Responsive design for all devices",
+        "Complete checkout process"
       ],
-      github: "https://github.com/tukangbakmi/tukangbakmi.github.io",
-      demo: "https://tukangbakmi.github.io",
-      status: "Live"
+      github: "https://github.com/tukangbakmi/E-commerce",
+      demo: "#",
+      status: "Completed"
+    },
+    {
+      title: "My Audits - File Download Tracking System",
+      description: "A secure file download tracking system built with PHP and MySQL to monitor and log access to sensitive files for audit purposes.",
+      image: myAuditsImg,
+      technologies: ["PHP", "MySQL", "Bootstrap", "jQuery", "PHPMailer", "Composer"],
+      features: [
+        "File upload and download tracking",
+        "User and admin role management",
+        "Download statistics and audit logs",
+        "Secure authentication system",
+        "Password reset functionality"
+      ],
+      github: "https://github.com/TukangBakmi/My-Audits",
+      demo: "#",
+      status: "Completed"
+    },
+    {
+      title: "RoboCash - Android Financial Management App",
+      description: "A comprehensive Android financial management application built with Java and Firebase, featuring transaction tracking, data visualization, and secure user authentication.",
+      image: robocashImg,
+      technologies: ["Java", "Android", "Firebase", "Material Design", "GraphView", "Picasso"],
+      features: [
+        "Income & expense tracking with categories",
+        "Firebase authentication with social login",
+        "Interactive charts and financial analysis",
+        "Material Design UI with custom animations",
+        "User profile management with avatars"
+      ],
+      github: "https://github.com/TukangBakmi/RoboCash",
+      demo: "#",
+      status: "Completed"
     }
   ];
 
@@ -69,6 +96,21 @@ function Projects() {
           {projects.map((project, index) => (
             <div key={index} className="col-lg-4 col-md-6 mb-4">
               <div className="card h-100">
+                {project.image && (
+                  <div className="card-img-container" style={{height: '200px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f8f9fa'}}>
+                    <img 
+                      src={project.image} 
+                      className="card-img-top" 
+                      alt={project.title} 
+                      style={{
+                        maxHeight: '100%', 
+                        maxWidth: '100%', 
+                        objectFit: 'contain',
+                        borderRadius: '8px 8px 0 0'
+                      }} 
+                    />
+                  </div>
+                )}
                 <div className="card-body d-flex flex-column">
                   <div className="d-flex justify-content-between align-items-start mb-2">
                     <h5 className="card-title">{project.title}</h5>
@@ -113,7 +155,7 @@ function Projects() {
           ))}
         </div>
       
-        <div className="row mt-5">
+        <div className="row my-5">
           <div className="col-12 text-center">
             <h4>More Projects Coming Soon!</h4>
             <p>I'm constantly working on new projects. Check back regularly or follow me on GitHub for updates.</p>
