@@ -8,6 +8,8 @@ function Contact() {
     subject: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [toast, setToast] = useState({ show: false, message: '', type: '' });
 
   const handleChange = (e) => {
     setFormData({
@@ -18,24 +20,40 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsLoading(true);
     
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',
-      'YOUR_TEMPLATE_ID', 
+      'service_mkc9lfl',
+      'template_lfpy3ql', 
       e.target,
-      'YOUR_PUBLIC_KEY'
+      'dE22uGElgn5KcwR99'
     )
     .then(() => {
-      alert('Thank you for your message! I\'ll get back to you soon.');
+      setToast({ show: true, message: 'Thank you for your message! I\'ll get back to you soon.', type: 'success' });
       setFormData({ name: '', email: '', subject: '', message: '' });
     })
     .catch(() => {
-      alert('Failed to send message. Please try again.');
+      setToast({ show: true, message: 'Failed to send message. Please try again.', type: 'error' });
+    })
+    .finally(() => {
+      setIsLoading(false);
     });
   };
 
   return (
     <div className="section">
+      {toast.show && (
+        <div className={`toast-container position-fixed top-0 end-0 p-3`}>
+          <div className={`toast show align-items-center text-bg-${toast.type === 'success' ? 'success' : 'danger'} border-0`} role="alert">
+            <div className="d-flex">
+              <div className="toast-body">
+                {toast.message}
+              </div>
+              <button type="button" className="btn-close btn-close-white me-2 m-auto" onClick={() => setToast({ show: false, message: '', type: '' })}></button>
+            </div>
+          </div>
+        </div>
+      )}
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto">
@@ -53,7 +71,7 @@ function Contact() {
                 <div className="mb-3">
                   <h6><strong>Email</strong></h6>
                   <p>
-                    <a href="mailto:albertardiansyah06@gmail.com" className="text-decoration-none">
+                    <a href="mailto:albertardiansyah06@gmail.com" className="text-primary text-decoration-none">
                       albertardiansyah06@gmail.com
                     </a>
                   </p>
@@ -141,7 +159,16 @@ function Contact() {
                   ></textarea>
                 </div>
                 
-                <button type="submit" className="btn btn-primary">Send Message</button>
+                <button type="submit" className="btn btn-primary" disabled={isLoading}>
+                  {isLoading ? (
+                    <>
+                      <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
+                </button>
               </form>
             </div>
           </div>
