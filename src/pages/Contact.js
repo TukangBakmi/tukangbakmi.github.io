@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -17,9 +18,20 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // For now, we'll just show an alert. In a real app, you'd send this to a backend
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    emailjs.sendForm(
+      'YOUR_SERVICE_ID',
+      'YOUR_TEMPLATE_ID', 
+      e.target,
+      'YOUR_PUBLIC_KEY'
+    )
+    .then(() => {
+      alert('Thank you for your message! I\'ll get back to you soon.');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    })
+    .catch(() => {
+      alert('Failed to send message. Please try again.');
+    });
   };
 
   return (
@@ -41,8 +53,8 @@ function Contact() {
                 <div className="mb-3">
                   <h6><strong>Email</strong></h6>
                   <p>
-                    <a href="mailto:albert.ardiansyah@example.com" className="text-decoration-none">
-                      albert.ardiansyah@example.com
+                    <a href="mailto:albertardiansyah06@gmail.com" className="text-decoration-none">
+                      albertardiansyah06@gmail.com
                     </a>
                   </p>
                 </div>
@@ -53,18 +65,18 @@ function Contact() {
                     <a href="https://github.com/tukangbakmi" className="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">
                       GitHub
                     </a>
-                    <a href="https://linkedin.com/in/albert-ardiansyah" className="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/albertardiansyah" className="btn btn-outline-primary btn-sm" target="_blank" rel="noopener noreferrer">
                       LinkedIn
                     </a>
-                    <a href="https://twitter.com/tukangbakmi" className="btn btn-outline-info btn-sm" target="_blank" rel="noopener noreferrer">
-                      Twitter
+                    <a href="https://instagram.com/aalbeert.12" className="btn btn-outline-info btn-sm" target="_blank" rel="noopener noreferrer">
+                      Instagram
                     </a>
                   </div>
                 </div>
                 
                 <div className="mb-3">
                   <h6><strong>Location</strong></h6>
-                  <p>Indonesia</p>
+                  <p>Jakarta, Indonesia</p>
                 </div>
                 
                 <div className="mb-3">
@@ -135,7 +147,7 @@ function Contact() {
           </div>
           
           <div className="row">
-            <div className="col-12 text-center">
+            <div className="col-12 text-center mb-5">
               <h4>Why Work With Me?</h4>
               <div className="row mt-4">
                 <div className="col-md-4 mb-3">

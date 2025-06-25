@@ -1,4 +1,5 @@
 import React from "react";
+import profilePic from '../assets/images/profile.png';
 
 function Home() {
   return (
@@ -19,8 +20,8 @@ function Home() {
           </div>
           <div className="col-lg-6 text-center">
             <div className="profile-placeholder bg-light rounded-circle mx-auto" 
-                 style={{width: '300px', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <span className="text-muted">Your Photo Here</span>
+                style={{width: '300px', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <img src={profilePic} alt="Albert Ardiansyah" className="rounded-circle" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
           </div>
         </div>
@@ -44,7 +45,7 @@ function Home() {
             <div className="card h-100 text-center">
               <div className="card-body">
                 <h5 className="card-title">Backend</h5>
-                <p className="card-text">Node.js, Express, Python, RESTful APIs</p>
+                <p className="card-text">Node.js, Python, PHP, RESTful APIs</p>
               </div>
             </div>
           </div>
@@ -52,7 +53,7 @@ function Home() {
             <div className="card h-100 text-center">
               <div className="card-body">
                 <h5 className="card-title">Tools & Others</h5>
-                <p className="card-text">Git, GitHub, VS Code, MongoDB, MySQL</p>
+                <p className="card-text">Git, GitHub, VS Code, Android Studio, MySQL, Python</p>
               </div>
             </div>
           </div>

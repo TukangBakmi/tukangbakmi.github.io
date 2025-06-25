@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container">
           <Link className="navbar-brand" to="/">Albert’s Portfolio</Link>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -34,7 +34,7 @@ function App() {
         </div>
       </nav>
 
-      <div className="container mt-5">
+      <div className="container-fluid p-0 mt-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
