@@ -58,7 +58,7 @@ h2::after {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, #667eea, #764ba2);
+  background: linear-gradient(90deg,  #ffffff00, #eeeeee);
   border-radius: 2px;
 }
 
@@ -102,24 +102,26 @@ h2::after {
   font-weight: 700;
   margin-bottom: 1rem;
   font-size: 3.5rem;
-  background: linear-gradient(45deg, #fff, #f0f8ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .hero-section h2 {
   font-size: 1.5rem;
   font-weight: 400;
+  color: #ffffff;
   opacity: 0.95;
   margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 .hero-section .lead {
   font-size: 1.3rem;
-  opacity: 0.9;
+  color: #ffffff;
+  opacity: 0.95;
   line-height: 1.8;
   margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
 .hero-section .btn {
@@ -127,7 +129,7 @@ h2::after {
   font-weight: 500;
   font-size: 1rem;
   border-radius: 50px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
@@ -135,10 +137,10 @@ h2::after {
 .hero-section .btn::before {
   content: '';
   position: absolute;
-  top: 0;
+  top: 20%;
   left: -100%;
-  width: 100%;
-  height: 100%;
+  width: 200%;
+  height: 200%;
   background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
   transition: left 0.5s;
 }
@@ -249,14 +251,15 @@ h2::after {
 .hero-section .card-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #2d3748;
+  color: #1a202c;
   margin-bottom: 1rem;
 }
 
 .hero-section .card-text {
-  color: #4a5568;
+  color: #2d3748;
   font-size: 0.95rem;
   line-height: 1.6;
+  font-weight: 500;
 }
 
 /* Navigation */
