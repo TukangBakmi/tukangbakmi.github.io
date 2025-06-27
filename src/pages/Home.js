@@ -48,7 +48,7 @@ function Home() {
         <div className="container">
           <div className="row g-4">
             <div className="col-md-3">
-              <div className="stat-card text-center p-4 rounded-4 hover-lift position-relative overflow-hidden" style={{background: 'linear-gradient(135deg, #667eea, #764ba2)', border: '2px solid rgba(255,255,255,0.1)'}}>
+              <div className="stat-card text-center p-4 rounded-4 hover-lift position-relative overflow-hidden" style={{background: 'linear-gradient(135deg, #F869D5, #5650DE)', border: '2px solid rgba(255,255,255,0.1)'}}>
                 <div className="position-absolute top-0 start-0 w-100 h-100 opacity-10" style={{background: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'}}></div>
                 <div className="position-relative">
                   <i className="fas fa-code text-white fs-1 mb-3 d-block"></i>

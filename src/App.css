@@ -70,7 +70,7 @@ h2::after {
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  background: linear-gradient(135deg, #000428 0%, #004292 100%);
   color: white;
   min-height: calc(100vh - 76px);
   display: flex;
@@ -273,7 +273,7 @@ h2::after {
 .navbar-brand {
   font-weight: 700;
   font-size: 1.6rem;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #A7BFE8, #6190E8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -298,10 +298,6 @@ h2::after {
   background: linear-gradient(45deg, #667eea, #764ba2);
   transition: all 0.3s ease;
   transform: translateX(-50%);
-}
-
-.navbar-nav .nav-link:hover::before {
-  width: 80%;
 }
 
 .navbar-nav .nav-link:hover {
