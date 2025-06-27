@@ -35,31 +35,40 @@ function Skills() {
   ];
 
   return (
-    <div className="section bg-light">
+    <div className="section dark-theme">
       <div className="container py-5">
         <div className="row">
-          <div className="col-12 text-center mb-5">
+          <div className="col-lg-10 mx-auto text-center mb-5">
             <h2>Technical Skills</h2>
-            <p className="lead">Technologies and tools I work with</p>
+            <p className="lead">Technologies and tools I work with to build amazing solutions</p>
           </div>
         </div>
         
-        <div className="row">
+        <div className="row g-4">
           {skillCategories.map((category, index) => (
             <div key={index} className="col-lg-4 col-md-6 mb-4">
-              <div className="card h-100 shadow-sm">
+              <div className="card h-100 skill-card">
                 <div className="card-body text-center">
-                  <div className="mb-3" style={{fontSize: '2rem'}}>{category.icon}</div>
-                  <h5 className="card-title">{category.title}</h5>
-                  <div className="d-flex flex-wrap justify-content-center gap-1">
+                  <div className="skill-icon mb-3">{category.icon}</div>
+                  <h5 className="card-title mb-4">{category.title}</h5>
+                  <div className="skills-container">
                     {category.skills.map((skill, skillIndex) => (
-                      <span key={skillIndex} className="badge bg-primary">{skill}</span>
+                      <span key={skillIndex} className="skill-badge">{skill}</span>
                     ))}
                   </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="row mt-5">
+          <div className="col-12 text-center">
+            <div className="skills-cta">
+              <h4 className="text-center">Always Learning & Growing</h4>
+              <p>I'm constantly expanding my skill set and staying up-to-date with the latest technologies.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
