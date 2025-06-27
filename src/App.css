@@ -27,7 +27,7 @@ h2::after {
 
 /* Dark Theme */
 .dark-theme {
-  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #082f5e 100%);
   color: white;
   min-height: 100vh;
   padding: 100px 0 50px;
