@@ -8,29 +8,31 @@ function About() {
           <div className="col-lg-10 mx-auto">
             <h2 className="text-center mb-5">About Me</h2>
           
-          <div className="row mb-5 gx-5">
-            <div className="col-md-6">
-              <h4>Who I Am</h4>
-              <p className="text-justify">
-                I'm Albert Ardiansyah, a full-stack developer with hands-on experience in web development, 
-                mobile applications, and artificial intelligence. I have worked across various industries 
-                including technology, finance, and education.
-              </p>
-              <p className="text-justify">
-                My expertise spans from front-end technologies like React and JavaScript to back-end 
-                development with PHP and database management, plus mobile development with Android/Kotlin.
-              </p>
-            </div>
-            <div className="col-md-6">
-              <h4>What I Do</h4>
-              <p className="text-justify">
-                I develop responsive web applications, build mobile apps, and work with AI/ML technologies. 
-                My experience includes full-stack development, database optimization, and system integration.
-              </p>
-              <p className="text-justify">
-                I also have teaching experience in AI and database concepts, and I'm passionate about 
-                mentoring others in technology.
-              </p>
+          <div className="intro-section">
+            <div className="row mb-5 gx-5">
+              <div className="col-md-6">
+                <h4>Who I Am</h4>
+                <p className="text-justify">
+                  I'm Albert Ardiansyah, a full-stack developer with hands-on experience in web development, 
+                  mobile applications, and artificial intelligence. I have worked across various industries 
+                  including technology, finance, and education.
+                </p>
+                <p className="text-justify">
+                  My expertise spans from front-end technologies like React and JavaScript to back-end 
+                  development with PHP and database management, plus mobile development with Android/Kotlin.
+                </p>
+              </div>
+              <div className="col-md-6">
+                <h4>What I Do</h4>
+                <p className="text-justify">
+                  I develop responsive web applications, build mobile apps, and work with AI/ML technologies. 
+                  My experience includes full-stack development, database optimization, and system integration.
+                </p>
+                <p className="text-justify">
+                  I also have teaching experience in AI and database concepts, and I'm passionate about 
+                  mentoring others in technology.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -127,9 +129,9 @@ function About() {
           </div>
 
           <div className="row mt-5">
-            <div className="col-12 text-center pb-2 mb-5">
-              <h4 className="mb-4">Interests</h4>
-              <div className="d-flex flex-wrap justify-content-center gap-2">
+            <div className="col-12 pb-2 mb-5">
+              <h4 className="mb-4 text-center">Interests</h4>
+              <div className="d-flex justify-content-center flex-wrap gap-2">
                 <span className="badge bg-primary fs-6">Full-Stack Development</span>
                 <span className="badge bg-primary fs-6">Mobile Development</span>
                 <span className="badge bg-primary fs-6">Artificial Intelligence</span>

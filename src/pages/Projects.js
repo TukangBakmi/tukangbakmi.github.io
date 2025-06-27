@@ -83,32 +83,38 @@ function Projects() {
   };
 
   return (
-    <div className="section">
+    <div className="section dark-theme">
       <div className="container">
         <div className="row">
-          <div className="col-12 text-center mb-5">
+          <div className="col-lg-10 mx-auto text-center mb-5">
             <h2>My Projects</h2>
-            <p className="lead">Here are some of the projects I've worked on</p>
+            <p className="lead">Showcasing my development journey through innovative solutions</p>
           </div>
         </div>
       
-        <div className="row">
+        <div className="row g-4">
           {projects.map((project, index) => (
-            <div key={index} className="col-lg-4 col-md-6 mb-4">
-              <div className="card h-100">
+            <div key={index} className="col-lg-6 col-md-6 mb-4">
+              <div className="card h-100 project-card">
                 {project.image && (
-                  <div className="card-img-container" style={{height: '200px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f8f9fa'}}>
+                  <div className="project-img-container">
                     <img 
                       src={project.image} 
                       className="card-img-top" 
-                      alt={project.title} 
-                      style={{
-                        maxHeight: '100%', 
-                        maxWidth: '100%', 
-                        objectFit: 'contain',
-                        borderRadius: '8px 8px 0 0'
-                      }} 
+                      alt={project.title}
                     />
+                    <div className="project-overlay">
+                      <div className="project-links">
+                        <a href={project.github} className="btn btn-outline-light btn-sm" target="_blank" rel="noopener noreferrer">
+                          <i className="fab fa-github"></i>
+                        </a>
+                        {project.demo !== "#" && (
+                          <a href={project.demo} className="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+                            <i className="fas fa-external-link-alt"></i>
+                          </a>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 )}
                 <div className="card-body d-flex flex-column">
@@ -139,7 +145,7 @@ function Projects() {
                   
                   <div className="mt-auto">
                     <div className="d-flex gap-2">
-                      <a href={project.github} className="btn btn-outline-dark btn-sm" target="_blank" rel="noopener noreferrer">
+                      <a href={project.github} className="btn btn-outline-light btn-sm" target="_blank" rel="noopener noreferrer">
                         GitHub
                       </a>
                       {project.demo !== "#" && (
@@ -157,11 +163,13 @@ function Projects() {
       
         <div className="row my-5">
           <div className="col-12 text-center">
-            <h4>More Projects Coming Soon!</h4>
-            <p>I'm constantly working on new projects. Check back regularly or follow me on GitHub for updates.</p>
-            <a href="https://github.com/tukangbakmi" className="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">
-              View All Repositories
-            </a>
+            <div className="cta-section">
+              <h4 className="text-center">More Projects Coming Soon!</h4>
+              <p>I'm constantly working on new projects. Check back regularly or follow me on GitHub for updates.</p>
+              <a href="https://github.com/tukangbakmi" className="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github me-2"></i>View All Repositories
+              </a>
+            </div>
           </div>
         </div>
       </div>
