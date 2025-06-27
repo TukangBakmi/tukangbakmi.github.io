@@ -1,11 +1,22 @@
 import React from "react";
-import { HashRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, NavLink, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Contact from "./pages/Contact";
 import "./App.css";
+
+function NavItem({ to, children }) {
+  return (
+    <NavLink 
+      to={to} 
+      className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+    >
+      {children}
+    </NavLink>
+  );
+}
 
 function App() {
   return (
@@ -19,19 +30,19 @@ function App() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/">Home</Link>
+                <NavItem to="/">Home</NavItem>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <NavItem to="/about">About</NavItem>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/projects">Projects</Link>
+                <NavItem to="/projects">Projects</NavItem>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/skills">Skills</Link>
+                <NavItem to="/skills">Skills</NavItem>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">Contact</Link>
+                <NavItem to="/contact">Contact</NavItem>
               </li>
             </ul>
           </div>
