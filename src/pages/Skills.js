@@ -36,7 +36,7 @@ function Skills() {
 
   return (
     <div className="section dark-theme">
-      <div className="container py-5">
+      <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto text-center mb-5">
             <h2>Technical Skills</h2>

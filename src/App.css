@@ -287,6 +287,101 @@ h2::after {
   backdrop-filter: blur(10px);
 }
 
+.dark-theme .contact-intro {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 198, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.dark-theme .contact-info-card,
+.dark-theme .contact-form-card {
+  height: 100%;
+}
+
+.dark-theme .form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 198, 255, 0.3);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.dark-theme .form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #00c6ff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 198, 255, 0.25);
+  color: white;
+}
+
+.dark-theme .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-theme .form-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.dark-theme .feature-card {
+  border: 1px solid rgba(0, 198, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.dark-theme .feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 198, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 198, 255, 0.2);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px rgba(0, 198, 255, 0.3));
+}
+
+.dark-theme .why-work-section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(0, 198, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.dark-theme .contact-info a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.dark-theme .contact-info a:hover {
+  color: #0072ff;
+}
+
+.dark-theme .feature-card p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-theme .contact-info p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark-theme .btn-outline-light:hover {
+  background-color: #333 !important;
+  border-color: #333 !important;
+  color: white !important;
+}
+
+.dark-theme a[href*="linkedin"]:hover {
+  background-color: #0077b5 !important;
+  border-color: #0077b5 !important;
+  color: white !important;
+}
+
+.dark-theme a[href*="instagram"]:hover {
+  background: linear-gradient(45deg, #682e8f, #d11717) !important;
+  border-color: #833ab4 !important;
+  color: white !important;
+}
+
 /* Hero Section */
 .hero-section {
   background: linear-gradient(135deg, #000428 0%, #004292 100%);
