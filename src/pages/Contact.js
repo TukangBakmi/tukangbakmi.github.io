@@ -10,6 +10,7 @@ function Contact() {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [toast, setToast] = useState({ show: false, message: "", type: "" });
+  const [toastFading, setToastFading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -36,6 +37,7 @@ function Contact() {
           type: "success",
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => hideToast(), 3000);
       })
       .catch(() => {
         setToast({
@@ -43,10 +45,19 @@ function Contact() {
           message: "Failed to send message. Please try again.",
           type: "error",
         });
+        setTimeout(() => hideToast(), 3000);
       })
       .finally(() => {
         setIsLoading(false);
       });
+  };
+
+  const hideToast = () => {
+    setToastFading(true);
+    setTimeout(() => {
+      setToast({ show: false, message: "", type: "" });
+      setToastFading(false);
+    }, 500);
   };
 
   return (
@@ -56,7 +67,7 @@ function Contact() {
           <div
             className={`toast show align-items-center text-bg-${
               toast.type === "success" ? "success" : "danger"
-            } border-0`}
+            } border-0 ${toastFading ? 'fade-out' : ''}`}
             role="alert"
           >
             <div className="d-flex">
@@ -64,7 +75,7 @@ function Contact() {
               <button
                 type="button"
                 className="btn-close btn-close-white me-2 m-auto"
-                onClick={() => setToast({ show: false, message: "", type: "" })}
+                onClick={hideToast}
               ></button>
             </div>
           </div>
