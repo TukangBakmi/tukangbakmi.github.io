@@ -862,8 +862,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(248, 250, 252, 0.8);
-  border-radius: 4px;
+  background: linear-gradient(0deg, #16213e 80%, #262626 95%);
 }
 
 ::-webkit-scrollbar-thumb {
