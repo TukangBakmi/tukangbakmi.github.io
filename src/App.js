@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { HashRouter as Router, Route, Routes, NavLink, Link, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Route,
+  Routes,
+  NavLink,
+  Link,
+  useLocation,
+} from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
@@ -9,9 +16,9 @@ import "./App.css";
 
 function NavItem({ to, children }) {
   return (
-    <NavLink 
-      to={to} 
-      className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}
+    <NavLink
+      to={to}
+      className={({ isActive }) => `nav-link ${isActive ? "active" : ""}`}
     >
       {children}
     </NavLink>
@@ -64,18 +71,35 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container">
-        <Link className="navbar-brand" to="/">Albert’s Portfolio</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <Link className="navbar-brand" to="/">
+          Albert’s Portfolio
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto position-relative" ref={navRef}>
             <span className="nav-underline" ref={underlineRef}></span>
-            <li className="nav-item"><NavItem to="/">Home</NavItem></li>
-            <li className="nav-item"><NavItem to="/about">About</NavItem></li>
-            <li className="nav-item"><NavItem to="/projects">Projects</NavItem></li>
-            <li className="nav-item"><NavItem to="/skills">Skills</NavItem></li>
-            <li className="nav-item"><NavItem to="/contact">Contact</NavItem></li>
+            <li className="nav-item">
+              <NavItem to="/">Home</NavItem>
+            </li>
+            <li className="nav-item">
+              <NavItem to="/about">About</NavItem>
+            </li>
+            <li className="nav-item">
+              <NavItem to="/projects">Projects</NavItem>
+            </li>
+            <li className="nav-item">
+              <NavItem to="/skills">Skills</NavItem>
+            </li>
+            <li className="nav-item">
+              <NavItem to="/contact">Contact</NavItem>
+            </li>
           </ul>
         </div>
       </div>
@@ -93,7 +117,7 @@ function App() {
           position: absolute;
           bottom: 0;
           height: 3px;
-          background: #6190E8;
+          background: #6190e8;
           border-radius: 2px;
           transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
           opacity: 0;

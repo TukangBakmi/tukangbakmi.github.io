@@ -67,7 +67,7 @@ function Contact() {
           <div
             className={`toast show align-items-center text-bg-${
               toast.type === "success" ? "success" : "danger"
-            } border-0 ${toastFading ? 'fade-out' : ''}`}
+            } border-0 ${toastFading ? "fade-out" : ""}`}
             role="alert"
           >
             <div className="d-flex">
@@ -170,84 +170,84 @@ function Contact() {
                   <div className="contact-form-card">
                     <h4>Send a Message</h4>
                     <form onSubmit={handleSubmit}>
-                        <div className="mb-3">
-                          <label htmlFor="name" className="form-label">
-                            Name *
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
+                      <div className="mb-3">
+                        <label htmlFor="name" className="form-label">
+                          Name *
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
 
-                        <div className="mb-3">
-                          <label htmlFor="email" className="form-label">
-                            Email *
-                          </label>
-                          <input
-                            type="email"
-                            className="form-control"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
+                      <div className="mb-3">
+                        <label htmlFor="email" className="form-label">
+                          Email *
+                        </label>
+                        <input
+                          type="email"
+                          className="form-control"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
 
-                        <div className="mb-3">
-                          <label htmlFor="subject" className="form-label">
-                            Subject *
-                          </label>
-                          <input
-                            type="text"
-                            className="form-control"
-                            id="subject"
-                            name="subject"
-                            value={formData.subject}
-                            onChange={handleChange}
-                            required
-                          />
-                        </div>
+                      <div className="mb-3">
+                        <label htmlFor="subject" className="form-label">
+                          Subject *
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control"
+                          id="subject"
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleChange}
+                          required
+                        />
+                      </div>
 
-                        <div className="mb-3">
-                          <label htmlFor="message" className="form-label">
-                            Message *
-                          </label>
-                          <textarea
-                            className="form-control"
-                            id="message"
-                            name="message"
-                            rows="5"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                          ></textarea>
-                        </div>
+                      <div className="mb-3">
+                        <label htmlFor="message" className="form-label">
+                          Message *
+                        </label>
+                        <textarea
+                          className="form-control"
+                          id="message"
+                          name="message"
+                          rows="5"
+                          value={formData.message}
+                          onChange={handleChange}
+                          required
+                        ></textarea>
+                      </div>
 
-                        <button
-                          type="submit"
-                          className="btn btn-primary"
-                          disabled={isLoading}
-                        >
-                          {isLoading ? (
-                            <>
-                              <span
-                                className="spinner-border spinner-border-sm me-2"
-                                role="status"
-                                aria-hidden="true"
-                              ></span>
-                              Sending...
-                            </>
-                          ) : (
-                            "Send Message"
-                          )}
-                        </button>
+                      <button
+                        type="submit"
+                        className="btn btn-primary"
+                        disabled={isLoading}
+                      >
+                        {isLoading ? (
+                          <>
+                            <span
+                              className="spinner-border spinner-border-sm me-2"
+                              role="status"
+                              aria-hidden="true"
+                            ></span>
+                            Sending...
+                          </>
+                        ) : (
+                          "Send Message"
+                        )}
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -264,7 +264,10 @@ function Contact() {
                         <div className="card-body text-center">
                           <div className="feature-icon mb-3">🎯</div>
                           <h5>Passionate Learner</h5>
-                          <p>Always eager to learn new technologies and improve my skills</p>
+                          <p>
+                            Always eager to learn new technologies and improve
+                            my skills
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -273,7 +276,10 @@ function Contact() {
                         <div className="card-body text-center">
                           <div className="feature-icon mb-3">🧩</div>
                           <h5>Problem Solver</h5>
-                          <p>Love tackling complex challenges and finding creative solutions</p>
+                          <p>
+                            Love tackling complex challenges and finding
+                            creative solutions
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -282,7 +288,9 @@ function Contact() {
                         <div className="card-body text-center">
                           <div className="feature-icon mb-3">🤝</div>
                           <h5>Team Player</h5>
-                          <p>Enjoy collaborating and contributing to team success</p>
+                          <p>
+                            Enjoy collaborating and contributing to team success
+                          </p>
                         </div>
                       </div>
                     </div>
