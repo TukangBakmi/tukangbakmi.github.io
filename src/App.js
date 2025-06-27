@@ -37,10 +37,25 @@ function Navbar() {
 
     if (activeLink && underline) {
       const { offsetLeft, offsetWidth } = activeLink;
-      const underlineWidth = offsetWidth * 0.3;
-      underline.style.left = `${offsetLeft + (offsetWidth - underlineWidth) / 2}px`;
-      underline.style.width = `${underlineWidth}px`;
+
+      const wideWidth = offsetWidth * 1.2;
+      const wideLeft = offsetLeft + (offsetWidth - wideWidth) / 2;
+
+      const finalWidth = offsetWidth * 0.3;
+      const finalLeft = offsetLeft + (offsetWidth - finalWidth) / 2;
+
+      // Step 1: Start transition to wide and moving
+      underline.style.transition = "all 0.4s ease-in-out";
       underline.style.opacity = 1;
+      underline.style.width = `${wideWidth}px`;
+      underline.style.left = `${wideLeft}px`;
+
+      // Step 2: After the move completes, shrink to final position
+      setTimeout(() => {
+        underline.style.transition = "all 0.3s ease-in-out";
+        underline.style.width = `${finalWidth}px`;
+        underline.style.left = `${finalLeft}px`;
+      }, 400); // Wait for the slide to finish
     } else if (underline) {
       underline.style.opacity = 0;
     }
@@ -78,7 +93,7 @@ function App() {
           position: absolute;
           bottom: 0;
           height: 3px;
-          background: linear-gradient(90deg, #004292, #6190E8);
+          background: #6190E8;
           border-radius: 2px;
           transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
           opacity: 0;
