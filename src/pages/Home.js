@@ -8,19 +8,25 @@ function Home() {
       <div className="container">
         <div className="row align-items-center min-vh-100">
           <div className="col-lg-6">
-            <h1 className="display-4 fw-bold mb-3">Albert Ardiansyah</h1>
-            <h2 className="h4 mb-4 position-relative d-inline-block">
-              <span className="badge bg-primary text-white px-3 py-2 rounded-pill shadow">
-                <i className="fas fa-code me-2"></i>Junior Software Developer
-              </span>
-            </h2>
-            <p className="lead mb-4">
-              Passionate full-stack developer with experience in web and mobile applications. 
-              I love turning ideas into reality through clean, efficient code and modern technologies.
-            </p>
-            <div className="d-flex gap-3 mb-4">
-              <a href="#/projects" className="btn btn-primary btn-lg">View My Work</a>
-              <a href="#/contact" className="btn btn-outline-secondary btn-lg">Get In Touch</a>
+            <div className="hero-content">
+              <h1 className="display-4 fw-bold mb-3 hero-title">Albert Ardiansyah</h1>
+              <h2 className="h4 mb-4 position-relative d-inline-block">
+                <span className="badge bg-primary text-white px-3 py-2 rounded-pill shadow typing-badge">
+                  <i className="fas fa-code me-2"></i>Junior Software Developer
+                </span>
+              </h2>
+              <p className="lead mb-4 hero-description">
+                Passionate full-stack developer with experience in web and mobile applications. 
+                I love turning ideas into reality through clean, efficient code and modern technologies.
+              </p>
+            </div>
+            <div className="d-flex gap-3 mb-4 hero-buttons">
+              <a href="#/projects" className="btn btn-primary btn-lg pulse-btn">
+                <i className="fas fa-briefcase me-2"></i>View My Work
+              </a>
+              <a href="#/contact" className="btn btn-outline-secondary btn-lg hover-fill">
+                <i className="fas fa-envelope me-2"></i>Get In Touch
+              </a>
             </div>
             <div className="d-flex gap-3">
               <a href="https://github.com/tukangbakmi" className="btn btn-dark" style={{boxShadow: '0 4px 8px rgba(0,0,0,0.15)'}} target="_blank" rel="noopener noreferrer">
@@ -35,9 +41,9 @@ function Home() {
             </div>
           </div>
           <div className="col-lg-6 text-center">
-            <div className="profile-placeholder bg-light rounded-circle mx-auto" 
-                style={{width: '300px', height: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                <img src={profilePic} alt="Albert Ardiansyah" className="rounded-circle" style={{width: '100%', height: '100%', objectFit: 'cover'}} />
+            <div className="profile-container">
+              <div className="profile-glow"></div>
+              <img src={profilePic} alt="Albert Ardiansyah" className="profile-img floating" />
             </div>
           </div>
         </div>
@@ -91,31 +97,167 @@ function Home() {
         </div>
       </div>
       <style jsx>{`
-        .text-gradient {
+        .hero-content {
+          animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-title {
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          animation: slideInLeft 1s ease-out 0.2s both;
         }
-        .profile-container {
-          width: 300px;
-          height: 300px;
-          margin: 0 auto;
+        
+        .typing-badge {
+          animation: slideInLeft 1s ease-out 0.4s both;
         }
-        .profile-img {
+        
+        .hero-description {
+          animation: slideInLeft 1s ease-out 0.6s both;
+        }
+        
+        .hero-buttons {
+          animation: slideInUp 1s ease-out 0.8s both;
+        }
+        
+        .pulse-btn {
+          animation: pulse 2s infinite;
+        }
+        
+        .hover-fill {
+          position: relative;
+          overflow: hidden;
+          transition: color 0.3s ease;
+        }
+        
+        .hover-fill::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
           width: 100%;
           height: 100%;
+          background: #6c757d;
+          transition: left 0.3s ease;
+          z-index: -1;
+        }
+        
+        .hover-fill:hover::before {
+          left: 0;
+        }
+        
+        .hover-fill:hover {
+          color: white;
+        }
+        
+        .profile-container {
+          position: relative;
+          width: 320px;
+          height: 320px;
+          margin: 0 auto;
+          animation: slideInRight 1s ease-out 0.5s both;
+        }
+        
+        .profile-img {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
           object-fit: cover;
           position: relative;
           z-index: 2;
+          border: 4px solid rgba(255,255,255,0.2);
+          box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
+        
         .profile-glow {
+          position: absolute;
           width: 320px;
           height: 320px;
           background: linear-gradient(45deg, #667eea, #764ba2);
-          top: -10px;
-          left: -10px;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
           z-index: 1;
           opacity: 0.3;
+          animation: rotate 10s linear infinite;
+        }
+        
+        .floating {
+          animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes slideInLeft {
+          from {
+            opacity: 0;
+            transform: translateX(-50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes slideInRight {
+          from {
+            opacity: 0;
+            transform: translateX(50px);
+          }
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        
+        @keyframes slideInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        @keyframes pulse {
+          0% {
+            box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+          }
+          70% {
+            box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+          }
+        }
+        
+        @keyframes floating {
+          0%, 100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-10px);
+          }
+        }
+        
+        @keyframes rotate {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
         }
         .hover-lift {
           transition: transform 0.3s ease;
