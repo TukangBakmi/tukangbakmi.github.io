@@ -1033,6 +1033,42 @@ h2::after {
   .stat-card .text-white-50 {
     color: white !important;
   }
+  
+  .stat-card {
+    padding: 1rem 0.75rem !important;
+  }
+  
+  .stat-card h2 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  
+  .stat-card i {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .stat-card p {
+    font-size: 0.75rem !important;
+    margin-bottom: 0 !important;
+  }
+  
+  .py-5 {
+    padding: 1.5rem 0 !important;
+  }
+  
+  .row.g-4 {
+    gap: 0.25rem !important;
+  }
+  
+  .col-md-3 {
+    flex: 0 0 auto;
+    width: 48%;
+  }
+  
+  .stat-card h2::after {
+    display: none;
+  }
 }
 
 /* Animations */

@@ -83,10 +83,10 @@ function Home() {
       </div>
 
       {/* Quick Stats Section */}
-      <div className="py-5">
+      <div className="py-5 mt-sm-5 mt-lg-0">
         <div className="container">
           <div className="row g-4">
-            <div className="col-md-3">
+            <div className="col-md-3 m-0">
               <div
                 className="stat-card text-center p-4 rounded-4 hover-lift position-relative overflow-hidden"
                 style={{
@@ -108,7 +108,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 m-0">
               <div
                 className="stat-card text-center p-4 rounded-4 hover-lift position-relative overflow-hidden"
                 style={{
@@ -130,7 +130,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 m-0">
               <div
                 className="stat-card text-center p-4 rounded-4 hover-lift position-relative overflow-hidden"
                 style={{
@@ -152,7 +152,7 @@ function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-3 m-0">
               <div
                 className="stat-card text-center p-4 rounded-4 hover-lift position-relative overflow-hidden"
                 style={{
