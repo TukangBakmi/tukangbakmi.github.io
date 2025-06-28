@@ -28,12 +28,32 @@ function NavItem({ to, children }) {
 function Navbar() {
   const underlineRef = useRef(null);
   const navRef = useRef(null);
+  const navbarRef = useRef(null);
   const location = useLocation();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     // wait until component is mounted and refs are available
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        const navbarCollapse = document.getElementById('navbarNav');
+        if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+          const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+          });
+          bsCollapse.hide();
+        }
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   useEffect(() => {
@@ -66,10 +86,22 @@ function Navbar() {
     } else if (underline) {
       underline.style.opacity = 0;
     }
+
+    // Close mobile navbar on route change
+    const navbarCollapse = document.getElementById('navbarNav');
+    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+      const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+      });
+      bsCollapse.hide();
+    }
+    
+    // Scroll to top on route change
+    window.scrollTo(0, 0);
   }, [location.pathname, mounted]);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" ref={navbarRef}>
       <div className="container">
         <Link className="navbar-brand" to="/">
           Albert’s Portfolio
@@ -137,6 +169,26 @@ function App() {
 
         .nav-link.active {
           color: #00c6ff;
+        }
+        
+        @media (max-width: 991px) {
+          .nav-underline {
+            display: none;
+          }
+          
+          .navbar-nav {
+            text-align: center;
+            margin-top: 1rem;
+          }
+          
+          .nav-link {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+          }
+          
+          .nav-link:last-child {
+            border-bottom: none;
+          }
         }
       `}</style>
 

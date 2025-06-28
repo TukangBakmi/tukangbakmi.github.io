@@ -198,12 +198,8 @@ h2::after {
   gap: 1rem;
 }
 
-.dark-theme .cta-section {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 198, 255, 0.2);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  backdrop-filter: blur(10px);
+.dark-theme .cta-section, .dark-theme .skills-cta {
+  padding: 2rem;
 }
 
 .dark-theme h6,
@@ -277,14 +273,6 @@ h2::after {
   border-color: rgba(0, 198, 255, 0.5);
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 198, 255, 0.2);
-}
-
-.dark-theme .skills-cta {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 198, 255, 0.2);
-  border-radius: 20px;
-  padding: 2rem;
-  backdrop-filter: blur(10px);
 }
 
 .dark-theme .contact-intro {
@@ -806,24 +794,240 @@ h2::after {
   margin-bottom: 5px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+.contact-info .btn {
+  padding: 0.25rem 0.5rem;
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 991px) and (min-width: 769px) {
   .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   
   .hero-section .lead {
+    font-size: 1.2rem;
+  }
+  
+  .dark-theme h2 {
+    font-size: 2.5rem;
+  }
+  
+  .dark-theme h4 {
+    font-size: 1.5rem;
+  }
+  
+  .card-title {
     font-size: 1.1rem;
   }
   
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section .col-lg-6:first-child {
+    order: 2;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .hero-section .col-lg-6:last-child {
+    order: 1;
+  }
+  
+  .stat-card p {
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-container {
+    margin: 2.5rem auto 0 !important;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+  
+  .hero-section .lead {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
   .hero-section .btn {
-    padding: 10px 25px;
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .dark-theme h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .dark-theme h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .dark-theme h5 {
+    font-size: 1.1rem;
+  }
+  
+  .dark-theme h6 {
+    font-size: 0.95rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .card-text {
     font-size: 0.9rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
   }
   
   .profile-placeholder {
     width: 200px !important;
     height: 200px !important;
+  }
+  
+  .dark-theme {
+    padding: 80px 0 30px;
+  }
+  
+  .project-img-container {
+    height: 200px;
+  }
+  
+  .skill-icon {
+    font-size: 2rem;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .floating {
+    animation: none;
+  }
+  
+  .pulse-btn {
+    animation: none;
+  }
+  
+  .contact-info .d-flex {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  
+  .contact-info .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 8px 12px;
+  }
+  
+  .skill-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .intro-section .row.gx-5 {
+    gap: 2rem 0;
+  }
+  
+  .d-flex.gap-2 {
+    flex-direction: column;
+    gap: 0.5rem !important;
+  }
+  
+  .d-flex.gap-2 .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .d-flex.gap-2 .badge {
+    width: fit-content;
+    align-self: left;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .text-justify {
+    text-align: left;
+  }
+  
+  .d-flex.justify-content-center.flex-wrap {
+    flex-direction: row !important;
+    justify-content: center !important;
+  }
+  
+  .navbar-toggler {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .hero-section {
+    padding: 60px 0 40px;
+    margin-top: -60px;
+  }
+  
+  .hero-section .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-section .row {
+    margin: 0;
+  }
+  
+  .profile-container {
+    width: 180px !important;
+    height: 180px !important;
+    margin: 2.5rem auto 0 !important;
+  }
+  
+  .profile-img {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  
+  .profile-glow {
+    width: 180px !important;
+    height: 180px !important;
+  }
+  
+  .hero-section .col-lg-6:first-child {
+    order: 2;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .hero-section .col-lg-6:last-child {
+    order: 1;
+  }
+  
+  .stat-card {
+    margin-bottom: 1rem;
   }
 }
 

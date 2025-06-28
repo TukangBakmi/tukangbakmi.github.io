@@ -181,6 +181,7 @@ function Contact() {
                           name="name"
                           value={formData.name}
                           onChange={handleChange}
+                          autoComplete="name"
                           required
                         />
                       </div>
@@ -196,6 +197,7 @@ function Contact() {
                           name="email"
                           value={formData.email}
                           onChange={handleChange}
+                          autoComplete="email"
                           required
                         />
                       </div>
@@ -211,6 +213,7 @@ function Contact() {
                           name="subject"
                           value={formData.subject}
                           onChange={handleChange}
+                          autoComplete="off"
                           required
                         />
                       </div>
@@ -226,6 +229,7 @@ function Contact() {
                           rows="5"
                           value={formData.message}
                           onChange={handleChange}
+                          autoComplete="off"
                           required
                         ></textarea>
                       </div>

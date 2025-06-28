@@ -176,7 +176,7 @@ function Home() {
           </div>
         </div>
       </div>
-      <style jsx>{`
+      <style>{`
         .hero-content {
           animation: fadeInUp 1s ease-out;
         }

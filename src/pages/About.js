@@ -48,10 +48,10 @@ function About() {
 
                 <div className="card mb-3">
                   <div className="card-body">
-                    <h5 className="card-title">
+                    <h5 className="card-title mb-2">
                       Bachelor's Degree, Information Technology
                     </h5>
-                    <h6 className="card-subtitle mb-2">
+                    <h6 className="card-subtitle mb-3">
                       Universitas Kristen Krida Wacana • Sep 2020 - Jul 2024 •
                       GPA: 3.85/4.00
                     </h6>
@@ -73,8 +73,8 @@ function About() {
 
                 <div className="card mb-3">
                   <div className="card-body">
-                    <h5 className="card-title">Dev Certified for Android</h5>
-                    <h6 className="card-subtitle mb-2">
+                    <h5 className="card-title mb-2">Dev Certified for Android</h5>
+                    <h6 className="card-subtitle mb-3">
                       dev.cert by dev.id • Issued Feb 2025 - Expires Feb 2028
                     </h6>
                     <p className="card-text">
@@ -83,7 +83,7 @@ function About() {
                       and mobile application best practices.
                     </p>
                     <div className="d-flex gap-2">
-                      <span className="badge bg-light text-dark d-flex align-items-center">
+                      <span className="badge bg-light text-dark d-flex align-items-center justify-content-center">
                         Credential ID: JE0PJ4O075
                       </span>
                       <a
@@ -106,8 +106,8 @@ function About() {
 
                 <div className="card mb-3">
                   <div className="card-body">
-                    <h5 className="card-title">Full-stack Developer</h5>
-                    <h6 className="card-subtitle mb-2">
+                    <h5 className="card-title mb-2">Full-stack Developer</h5>
+                    <h6 className="card-subtitle mb-3">
                       Indonesia Technology and Innovation • Dec 2024 - Mar 2025
                     </h6>
                     <p className="card-text">
@@ -122,8 +122,8 @@ function About() {
 
                 <div className="card mb-3">
                   <div className="card-body">
-                    <h5 className="card-title">Audit Intern</h5>
-                    <h6 className="card-subtitle mb-2">
+                    <h5 className="card-title mb-2">Audit Intern</h5>
+                    <h6 className="card-subtitle mb-3">
                       PT. Maybank Indonesia Finance • Sep 2023 - Feb 2024
                     </h6>
                     <p className="card-text">
@@ -136,8 +136,8 @@ function About() {
 
                 <div className="card mb-3">
                   <div className="card-body">
-                    <h5 className="card-title">AI Laboratory Assistant</h5>
-                    <h6 className="card-subtitle mb-2">
+                    <h5 className="card-title mb-2">AI Laboratory Assistant</h5>
+                    <h6 className="card-subtitle mb-3">
                       Universitas Kristen Krida Wacana • Mar 2023 - Jul 2023
                     </h6>
                     <p className="card-text">
@@ -150,8 +150,8 @@ function About() {
 
                 <div className="card mb-3">
                   <div className="card-body">
-                    <h5 className="card-title">Mobile Development Student</h5>
-                    <h6 className="card-subtitle mb-2">
+                    <h5 className="card-title mb-2">Mobile Development Student</h5>
+                    <h6 className="card-subtitle mb-3">
                       Bangkit Academy (Google, Tokopedia, Gojek, Traveloka) •
                       Feb 2023 - Jul 2023
                     </h6>
@@ -169,7 +169,7 @@ function About() {
             <div className="row mt-5">
               <div className="col-12 pb-2 mb-5">
                 <h4 className="mb-4 text-center">Interests</h4>
-                <div className="d-flex justify-content-center flex-wrap gap-2">
+                <div className="d-flex justify-content-center flex-wrap gap-2 px-2">
                   <span className="badge bg-primary fs-6">
                     Full-Stack Development
                   </span>
