@@ -75,6 +75,7 @@ function Home() {
                 src={profilePic}
                 alt="Albert Ardiansyah"
                 className="profile-img floating"
+                loading="lazy"
               />
             </div>
           </div>

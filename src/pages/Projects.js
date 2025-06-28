@@ -128,6 +128,7 @@ function Projects() {
                       src={project.image}
                       className="card-img-top"
                       alt={project.title}
+                      loading="lazy"
                     />
                     <div className="project-overlay">
                       <div className="project-links">
