@@ -139,10 +139,50 @@ function Navbar() {
   );
 }
 
+function BackToTop() {
+  const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300 && location.pathname !== '/') {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
+  }, [location.pathname]);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  return (
+    <button
+      className={`back-to-top ${isVisible ? 'show' : ''}`}
+      onClick={scrollToTop}
+      aria-label="Back to top"
+    >
+      <i className="fas fa-chevron-up"></i>
+    </button>
+  );
+}
+
+function BackToTopWrapper() {
+  return <BackToTop />;
+}
+
 function App() {
   return (
     <Router>
       <Navbar />
+      <BackToTop />
 
       <style jsx="true">{`
         .nav-underline {
