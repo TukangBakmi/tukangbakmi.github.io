@@ -166,6 +166,40 @@ function About() {
               </div>
             </div>
 
+            <div className="row mt-4">
+              <div className="col-12">
+                <h4 className="mb-4">GitHub Statistics</h4>
+                <div className="row g-3">
+                  <div className="col-md-6">
+                    <img 
+                      src="https://github-readme-stats.vercel.app/api?username=tukangbakmi&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f0f23&title_color=00c6ff&icon_color=00c6ff&text_color=ffffff" 
+                      alt="GitHub Stats" 
+                      className="img-fluid rounded"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <img 
+                      src="https://github-readme-streak-stats.herokuapp.com/?user=tukangbakmi&theme=tokyonight&hide_border=true&background=0f0f23&ring=00c6ff&fire=00c6ff&currStreakLabel=00c6ff" 
+                      alt="GitHub Streak" 
+                      className="img-fluid rounded"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+                <div className="row mt-3">
+                  <div className="col-12">
+                    <img 
+                      src="https://github-readme-activity-graph.vercel.app/graph?username=tukangbakmi&theme=tokyo-night&hide_border=true&bg_color=0f0f23&color=00c6ff&line=00c6ff&point=ffffff" 
+                      alt="GitHub Activity Graph" 
+                      className="img-fluid rounded"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="row mt-5">
               <div className="col-12 pb-2 mb-5">
                 <h4 className="mb-4 text-center">Interests</h4>

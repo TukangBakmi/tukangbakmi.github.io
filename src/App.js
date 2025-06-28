@@ -101,8 +101,12 @@ function Navbar() {
   }, [location.pathname, mounted]);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" ref={navbarRef}>
-      <div className="container">
+    <>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" ref={navbarRef} role="navigation" aria-label="Main navigation">
+        <div className="container">
         <Link className="navbar-brand" to="/">
           Albert’s Portfolio
         </Link>
@@ -136,6 +140,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
+    </>
   );
 }
 
@@ -172,10 +177,6 @@ function BackToTop() {
       <i className="fas fa-chevron-up"></i>
     </button>
   );
-}
-
-function BackToTopWrapper() {
-  return <BackToTop />;
 }
 
 function App() {
@@ -232,7 +233,7 @@ function App() {
         }
       `}</style>
 
-      <div className="container-fluid p-0 mt-5">
+      <main id="main-content" className="container-fluid p-0 mt-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -240,7 +241,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </div>
+      </main>
     </Router>
   );
 }

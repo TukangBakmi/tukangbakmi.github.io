@@ -124,7 +124,7 @@ h2::after {
 
 .dark-theme .card-text,
 .dark-theme .card-subtitle {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .dark-theme .badge.bg-primary {
@@ -209,7 +209,7 @@ h2::after {
 }
 
 .dark-theme .lead {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .dark-theme .skill-card {
@@ -345,7 +345,7 @@ h2::after {
 }
 
 .dark-theme .feature-card p {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .dark-theme .contact-info p {
@@ -1029,6 +1029,10 @@ h2::after {
   .stat-card {
     margin-bottom: 1rem;
   }
+  
+  .stat-card .text-white-50 {
+    color: white !important;
+  }
 }
 
 /* Animations */
@@ -1116,5 +1120,37 @@ html {
 /* Focus states for accessibility */
 .btn:focus,
 .form-control:focus {
-  outline: none;
+  outline: 2px solid #00c6ff;
+  outline-offset: 2px;
+}
+
+.nav-link:focus {
+  outline: 2px solid #00c6ff;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.back-to-top:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #00c6ff;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 9999;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }

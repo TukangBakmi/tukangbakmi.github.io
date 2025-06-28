@@ -102,7 +102,7 @@ function Home() {
                   }}
                 ></div>
                 <div className="position-relative">
-                  <i className="fas fa-code text-white fs-1 mb-3 d-block"></i>
+                  <i className="fas fa-code text-white fs-1 mb-3 d-block" aria-hidden="true"></i>
                   <h2 className="text-white fw-bold display-5 mb-2">4+</h2>
                   <p className="text-white-50 mb-0 fw-medium">Projects</p>
                 </div>
@@ -124,7 +124,7 @@ function Home() {
                   }}
                 ></div>
                 <div className="position-relative">
-                  <i className="fas fa-laptop-code text-white fs-1 mb-3 d-block"></i>
+                  <i className="fas fa-laptop-code text-white fs-1 mb-3 d-block" aria-hidden="true"></i>
                   <h2 className="text-white fw-bold display-5 mb-2">6+</h2>
                   <p className="text-white-50 mb-0 fw-medium">Technologies</p>
                 </div>
@@ -146,7 +146,7 @@ function Home() {
                   }}
                 ></div>
                 <div className="position-relative">
-                  <i className="fas fa-graduation-cap text-white fs-1 mb-3 d-block"></i>
+                  <i className="fas fa-graduation-cap text-white fs-1 mb-3 d-block" aria-hidden="true"></i>
                   <h2 className="text-white fw-bold display-5 mb-2">2+</h2>
                   <p className="text-white-50 mb-0 fw-medium">Years Learning</p>
                 </div>
@@ -168,7 +168,7 @@ function Home() {
                   }}
                 ></div>
                 <div className="position-relative">
-                  <i className="fas fa-heart text-white fs-1 mb-3 d-block"></i>
+                  <i className="fas fa-heart text-white fs-1 mb-3 d-block" aria-hidden="true"></i>
                   <h2 className="text-white fw-bold display-5 mb-2">100%</h2>
                   <p className="text-white-50 mb-0 fw-medium">Passion</p>
                 </div>
