@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.51aec819.css",
-    "main.js": "/static/js/main.4dfcdf8a.js",
+    "main.js": "/static/js/main.b037d71e.js",
     "static/media/hellomart.png": "/static/media/hellomart.44bed247e0e317574b0e.png",
     "static/media/profile.png": "/static/media/profile.fde4abdd9df9c79d1de0.png",
     "static/media/robocash.png": "/static/media/robocash.533e25dc429e8dd474f6.png",
@@ -10,10 +10,10 @@
     "static/media/my-audits.png": "/static/media/my-audits.cc9ddd04b2333c9a6aeb.png",
     "index.html": "/index.html",
     "main.51aec819.css.map": "/static/css/main.51aec819.css.map",
-    "main.4dfcdf8a.js.map": "/static/js/main.4dfcdf8a.js.map"
+    "main.b037d71e.js.map": "/static/js/main.b037d71e.js.map"
   },
   "entrypoints": [
     "static/css/main.51aec819.css",
-    "static/js/main.4dfcdf8a.js"
+    "static/js/main.b037d71e.js"
   ]
 }
